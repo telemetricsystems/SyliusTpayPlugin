@@ -1,0 +1,9 @@
+acme_sylius_tpay_shop:
+    resource: "@AcmeSyliusTpayPlugin/config/shop_routing.yml"
+    prefix: /{_locale}
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
+
+acme_sylius_tpay_admin:
+    resource: "@AcmeSyliusTpayPlugin/config/admin_routing.yml"
+    prefix: /admin

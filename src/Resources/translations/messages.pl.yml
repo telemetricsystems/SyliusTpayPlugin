@@ -1,0 +1,16 @@
+ts_sylius_tpay_plugin:
+    label: Tpay
+    form:
+        environment:
+            label: Środowisko
+            secure: Produkcyjne
+            sandbox: Testowe
+        pos_id:
+            label: Identyfikator punktu płatności
+            not_blank: Nie podano identyfikatora punktu płatności.
+        oauth_client_id:
+            label: OAuth protocol - client_id
+            not_blank: Nie podano identyfikatora OAuthClientId.
+        oauth_client_secret:
+            label: OAuth protocol - client_secret
+            not_blank: Nie podano kodu OAuthClientSecret.

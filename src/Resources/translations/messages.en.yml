@@ -1,0 +1,16 @@
+ts_sylius_tpay_plugin:
+    label: Tpay
+    form:
+        environment:
+            label: Environment
+            secure: Production
+            sandbox: Test
+        pos_id:
+            label: Payment point identifier
+            not_blank: The payment ID has not been provided.
+        oauth_client_id:
+            label: OAuth protocol - client_id
+            not_blank: The OAuthClientId code has not been provided.
+        oauth_client_secret:
+            label: OAuth protocol - client_secret
+            not_blank: The OAuthClientSecret code has not been provided.

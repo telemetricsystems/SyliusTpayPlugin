@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: Acme\SyliusTpayPlugin
+        psr4_prefix: Acme\SyliusTpayPlugin
