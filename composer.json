@@ -1,0 +1,81 @@
+{
+    "name": "telemetricsystems/sylius-tpay-plugin",
+    "type": "sylius-plugin",
+    "keywords": [
+        "sylius",
+        "sylius-plugin"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robert Pawłowski",
+            "email": "robert@telemetric.pl"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "php-http/message-factory": "^1.1",
+        "sylius/sylius": "~1.11.0 || ~1.12.0",
+        "tpay-com/tpay-openapi-php": "^1.6"
+    },
+    "require-dev": {
+        "behat/behat": "^3.7",
+        "behat/mink-selenium2-driver": "^1.4",
+        "dmore/behat-chrome-extension": "^1.3",
+        "dmore/chrome-mink-driver": "^2.7",
+        "friends-of-behat/mink": "^1.8",
+        "friends-of-behat/mink-browserkit-driver": "^1.4",
+        "friends-of-behat/mink-debug-extension": "^2.0",
+        "friends-of-behat/mink-extension": "^2.4",
+        "friends-of-behat/page-object-extension": "^0.3",
+        "friends-of-behat/suite-settings-extension": "^1.0",
+        "friends-of-behat/symfony-extension": "^2.1",
+        "friends-of-behat/variadic-extension": "^1.3",
+        "phpspec/phpspec": "^7.2",
+        "phpunit/phpunit": "^9.5",
+        "polishsymfonycommunity/symfony-mocker-container": "^1.0",
+        "sylius-labs/coding-standard": "^4.2",
+        "symfony/browser-kit": "^5.4 || ^6.0",
+        "symfony/debug-bundle": "^5.4 || ^6.0",
+        "symfony/dependency-injection": "<4.4.19 || ^5.2",
+        "symfony/dotenv": "^5.4 || ^6.0",
+        "symfony/flex": "^2.2.2",
+        "symfony/intl": "^5.4 || ^6.0",
+        "symfony/web-profiler-bundle": "^5.4 || ^6.0",
+        "vimeo/psalm": "5.9.0"
+    },
+    "conflict": {
+        "symfony/framework-bundle": "6.2.8"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": false,
+            "phpstan/extension-installer": true,
+            "symfony/flex": true
+        }
+    },
+    "extra": {
+        "symfony": {
+            "require": "^5.4 || ^6.0"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Ts\\SyliusTpayPlugin\\": "src/",
+            "Tests\\Ts\\SyliusTpayPlugin\\": "tests/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/Application/Kernel.php"
+        ]
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "security-checker security:check": "script"
+        }
+    }
+}

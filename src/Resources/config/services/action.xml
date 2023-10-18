@@ -1,0 +1,20 @@
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <defaults public="true" autoconfigure="false" autowire="false"/>
+
+        <service id="ts.sylius_tpay_plugin.action.capture" class="Ts\SyliusTpayPlugin\Action\CaptureAction">
+            <tag name="payum.action" factory="tpay" alias="payum.action.capture"/>
+        </service>
+
+        <service id="ts.sylius_tpay_plugin.action.notify" class="Ts\SyliusTpayPlugin\Action\NotifyAction">
+            <tag name="payum.action" factory="tpay" alias="payum.action.notify"/>
+        </service>
+
+        <service id="ts.sylius_tpay_plugin.action.status" class="Ts\SyliusTpayPlugin\Action\StatusAction">
+            <tag name="payum.action" factory="tpay" alias="payum.action.status"/>
+        </service>
+
+    </services>
+</container>
